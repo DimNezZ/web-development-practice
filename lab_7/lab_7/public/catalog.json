@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "https://dummyimage.com/250/ccc/000?text=Телефон",
+        "name": "Телефон",
+        "price": 90000
+    },
+    {
+        "id": 2,
+        "image": "https://dummyimage.com/250/ccc/000?text=Ноутбук",
+        "name": "Ноутбук",
+        "price": 320000
+    },
+    {
+        "id": 3,
+        "image": "https://dummyimage.com/250/ccc/000?text=Мышь",
+        "name": "Мышь",
+        "price": 10000
+    },
+    {
+        "id": 4,
+        "image": "https://dummyimage.com/250/ccc/000?text=Клавиатура",
+        "name": "Клавиатура",
+        "price": 8000
+    },
+    {
+        "id": 5,
+        "image": "https://dummyimage.com/250/ccc/000?text=Наушники",
+        "name": "Наушники",
+        "price": 15000
+    },
+    {
+        "id": 6,
+        "image": "https://dummyimage.com/250/ccc/000?text=Лампа",
+        "name": "Лампа",
+        "price": 3500
+    }
+]
