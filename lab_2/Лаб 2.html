@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Шаблон лабораторной работы</title>
+</head>
+<body>
+
+<script>
+    console.log("Функция power");
+        function power(num, exp){
+            let result = 1;
+        for(let i = 0; i <exp; i++)
+        {
+            result = result * num;
+        }
+        return(result);
+    }
+    console.log(power(2,10));
+</script>
+
+<script>
+
+// function randomInteger(min, max) {
+//   var rand = min + Math.random() * (max + 1 - min);
+//   return Math.floor(rand);
+// }
+//     console.log("Функция compare");
+
+//     function compare(x,y){
+//         if (x>y){
+//             return true;
+//             console.log (true);
+//         }
+//         else if (x<y) {
+//             return false;
+//             console.log (false);
+//         }
+//         else if (y===x){
+//             return null;
+//             console.log (null);
+//         }
+        
+//     }
+//     console.log(compare(randomInteger(1,8),randomInteger(1,8)));
+
+function compare(x){
+return function(y){
+if (y>x) 
+console.log (true);
+if (y<x) 
+console.log (false); ;
+if (y==x) 
+console.log (null);
+}
+}
+var a=compare(50)
+a(60)
+</script>
+
+<script>
+    console.log('Первый заглавный символ');
+    function ucfirst(stroka1){
+    let stroka2 = stroka1.split(' ');
+    let stroka3 = '';
+for (let i = 0; i < stroka2.length; i++) {
+    let Zagl = stroka2[i].substring(0, 1).toUpperCase();
+    let NeZagl = stroka2[i].substring(1, stroka2[i].length);
+stroka3 =stroka3 + Zagl + NeZagl + ' ';
+};
+console.log(stroka3);
+    }
+ucfirst("ехал грека через реку, видит грека — в реке рак. сунул грека руку в реку, рак за руку греку — цап!  ");
+</script>
+
+
+<script>
+    console.log('Книги');
+
+ function showBook(){
+
+console.log(`Название - ${this.title}; Год публикации - ${this.pubYear}; Цена - ${this.price}`);
+
+
+
+}
+
+
+let book2 = {
+title: "Война и мир",
+pubYear: 1865,
+price: 5000,
+show() {
+    console.log(`Название - ${this.title}; Год публикации - ${this.pubYear}; Цена - ${this.price}`);
+
+}
+}
+
+let book1 = {
+title: "Как выжить на карантине",
+pubYear: 2020,
+price: 3000,
+show: showBook 
+
+};
+book1.show();
+book2.show();
+</script>
+
+
+<script>
+
+console.log("Конструктор Book");
+
+function Book (title, pubYear, price){
+    this.title= title;
+    this.pubYear= pubYear;
+    this.price= price;
+    // this.show = function(){
+    //     console.log(`Название - ${this.title}; Цена - ${this.price};`);
+    // }
+}
+Book.prototype.show = function (){
+    console.log( this.title);
+    console.log( this.pubYear);
+    console.log( this.price);
+}
+ 
+let book3 = new Book ('Книга', 1999, 4350);
+book3.show();
+
+
+</script>
+<script>
+    console.log('Квадрат массива');
+var a = [5, 12];
+var b = [];
+a[99] = 7;
+for (var x in a) {
+b = Math.pow(a[x], 2);
+console.log(b);
+}
+for (var i = 0; a.length > i; i++) {
+    if (!isNaN(a[i])) {
+    console.log(Math.pow(a[i], 2))
+    }
+    }
+</script>
+<script>
+console.log('Поиск слова');
+let s = 'Мы знаем, что монохромный цвет - это градации серого';
+let txt = 'хром';
+let exp = new RegExp(txt, 'gi')
+let words = s.split(/\s+/g);
+let word = words.find(function (value) {
+    return exp.test(value);
+});
+console.log(word);
+
+</script>
+</body>
+</html>
