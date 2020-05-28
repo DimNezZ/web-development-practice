@@ -1,0 +1,15 @@
+<script>
+console.log("Задача 2. Сделайте цепочку из трех промисов. Пусть первый промис возвращает число. Сделайте так, чтобы каждый последующий промис через 3 секунды возводил в квадрат результат предыдущего промиса. После окончания манипуляций выведите число алертом на экран. ");
+
+let num = new Promise((resolve, reject) =>
+setTimeout(() => {resolve(7);}, 3000));
+
+num.then((result) => new Promise((resolve, reject) =>
+setTimeout(() => { resolve(Math.pow(result, 2)); }, 3000)))
+.then(
+(result) => new Promise((resolve, reject) =>
+setTimeout(() => { resolve(Math.pow(result, 2));}, 3000)))
+.then( (result) => console.log(result));
+   
+
+</script>

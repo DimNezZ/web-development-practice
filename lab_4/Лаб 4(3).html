@@ -1,0 +1,25 @@
+<script>
+
+console.log("Задача 3. Сделайте 3 промиса, в каждом из которых расположена функция setTimeout со случайно задержкой от 1 до 5 секунд. Пусть каждый промис своим результатом возвращает эту задержку. С помощью Promise.all получите массив результатов, найдите его сумму, выведите на экран. ");
+
+let array = [ new Promise((resolve, reject) => {
+let rand = getRand(5);
+setTimeout(() => resolve(rand), rand * 1000)}),
+
+new Promise((resolve, reject) => {
+let rand = getRand(5);
+setTimeout(() => resolve(rand), rand * 1000)}),
+
+new Promise((resolve, reject) => {
+let rand = getRand(5);
+setTimeout(() => resolve(rand), rand * 1000)}),];
+
+Promise.all(array).then(
+result => console.log(`Первое значение - ${result[0]} Второе значеие ${result[1]} Третье значение - ${result[2]} Сумма - ${result[0] + result[1] + result[2]}`));
+
+function getRand(num) {
+return Math.floor(Math.random() * num);
+}
+
+
+</script>

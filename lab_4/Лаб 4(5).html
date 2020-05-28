@@ -1,0 +1,38 @@
+<script>
+console.log("Реализуйте класс Student (Студент), который будет наследовать от класса User. Этот класс должен иметь следующие свойства: name (имя, наследуется от User), surname (фамилия, наследуется от User), year (год поступления в вуз). Класс должен иметь метод getFullName() (наследуется от User), с помощью которого можно вывести одновременно имя и фамилию студента. Также класс должен иметь метод getCourse(), который будет выводить текущий курс студента (от 1 до 5). Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.");
+
+class User 
+{ 
+constructor(name, surname) {
+this.name = name;
+this.surname = surname;
+}
+
+getFullName() {
+return this.name + ' ' + this.surname;
+}
+}
+
+class Student extends User 
+{
+constructor(name, surname, year) {
+super(name, surname);
+this.year = year;
+}
+
+getCourse(){
+let year = (new Date()).getFullYear();
+return year - this.year;
+}
+}
+
+var student1 = new Student('Иван', 'Иванов', 2017);
+var student2 = new Student('Генадий', 'Генадьев', 2019);
+
+console.log(`Имена: ${student1.name}, ${student2.name}`); 
+console.log(`Фамилии: ${student1.surname}, ${student2.surname}`); 
+console.log(`${student1.getFullName()}, ${student2.getFullName()}`); 
+console.log(`Год поступления: ${student1.year}, ${student2.year}`);
+console.log(`Курс: ${student1.getCourse()}, ${student2.getCourse()}`);
+
+</script>
