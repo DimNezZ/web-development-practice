@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Шаблон лабораторной работы</title>
+</head>
+<body>
+
+    <script>
+     console.log("Цикл for");
+        function power(num, exp){
+            let result = 1;
+        for(let i = 0; i <exp; i++)
+        {
+            result = result * num;
+            console.log(result)
+        }
+        return("Итоговое число = " + result);
+    }
+    console.log(power(2,10));
+    </script>
+    
+    
+    <script>
+            console.log("Цикл while");
+        let num1 = 2;
+        let exp = 10;
+        let result = 1;
+        let cnt = 1;
+    while (cnt <= exp)
+    {
+      result = result * num1;
+      console.log(result)
+      cnt++;
+    }
+    </script>
+    
+    
+    <script>
+    console.log("Условия else if");
+        let age =55;
+    if ( age > 18 && age <= 59){ console.log ("Вам еще работать и работать");}
+    else if (age > 59)  { console.log ("Вам пора на пенсию");}
+    else if (age > 1 && age <= 17) { console.log ("Вам еще рано работать");}
+    else { console.log  (" Неверное значение ");}
+    </script>
+    
+    <script>
+            console.log("Case-switch");
+        let num2 = 3;
+    switch (num2) {
+        case 1: console.log("Зима");
+         break;
+         case 2: console.log("Весна");
+         break;
+    
+         case 3: console.log("Лето");
+         break;
+    
+         case 4: console.log("Осень");
+         break;
+    
+         default:  console.log("Неверное значение");
+         break;    
+    }
+    </script>
+
+<script>
+    console.log("Пирамидка из чисел")
+for (let i = 1; i <= 9; i++) {
+	let piramida = '              '; 
+	
+	for (let j = 1; j <= i; j++) {
+        piramida = piramida.substr(1);
+		piramida =piramida + i;
+	}
+		console.log(piramida);
+}
+</script>
+</body>
+</html>
